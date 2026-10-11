@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# System files
+.DS_Store
+
+# Frontend build output
+frontend/dist/

@@ -1,0 +1,248 @@
+.recipe-detail {
+  max-width: 880px;
+  margin: 24px auto 60px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: left;
+}
+
+.recipe-detail-hero {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background: linear-gradient(135deg, var(--cream-2), #fde9d6);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.recipe-detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-detail-placeholder {
+  display: none;
+  font-size: 80px;
+  color: var(--orange);
+}
+
+.recipe-detail-overlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.recipe-detail-badge {
+  display: inline-block;
+  background: var(--green);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.recipe-detail-body {
+  padding: 32px 28px 40px;
+}
+
+.recipe-detail-header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0e6d8;
+}
+
+.recipe-detail-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+
+.recipe-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cream-2);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 20px;
+}
+
+.recipe-detail-section {
+  margin-bottom: 28px;
+}
+
+.recipe-detail-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 14px;
+}
+
+.recipe-detail-ingredients {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.recipe-detail-ingredients li {
+  position: relative;
+  padding: 10px 14px 10px 32px;
+  background: var(--cream-2);
+  border-radius: 10px;
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.recipe-detail-ingredients li::before {
+  content: "•";
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.recipe-detail-instructions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.recipe-detail-step {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: var(--cream-2);
+  border-radius: 12px;
+  border-left: 4px solid var(--orange);
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.step-text {
+  flex: 1;
+  padding-top: 2px;
+}
+
+.recipe-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 12px;
+  padding-top: 22px;
+  border-top: 1px solid #f0e6d8;
+}
+
+.btn-back {
+  background: var(--cream-2);
+  color: var(--text);
+  border: 1.5px solid #ecd9c6;
+  padding: 11px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-back:hover {
+  background: #f5e6d2;
+  transform: translateY(-1px);
+}
+
+.btn-delete {
+  background: #e53935;
+  color: var(--white);
+  border: none;
+  padding: 11px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-delete:hover {
+  background: #c62828;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .recipe-detail-hero {
+    height: 240px;
+  }
+
+  .recipe-detail-placeholder {
+    font-size: 56px;
+  }
+
+  .recipe-detail-body {
+    padding: 22px 16px 32px;
+  }
+
+  .recipe-detail-title {
+    font-size: 22px;
+  }
+
+  .recipe-detail-section-title {
+    font-size: 17px;
+  }
+
+  .recipe-detail-ingredients {
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-detail-actions {
+    justify-content: stretch;
+  }
+
+  .btn-back,
+  .btn-delete {
+    flex: 1;
+    justify-content: center;
+  }
+}
